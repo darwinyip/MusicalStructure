@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 class SongHolder extends RecyclerView.ViewHolder {
     private TextView title, artist;
-    private Song song;
 
     SongHolder(View itemView) {
         super(itemView);
@@ -15,7 +14,6 @@ class SongHolder extends RecyclerView.ViewHolder {
     }
 
     void setSong(Song song) {
-        this.song = song;
         title.setText(song.getTitle());
         artist.setText(song.getArtist());
     }

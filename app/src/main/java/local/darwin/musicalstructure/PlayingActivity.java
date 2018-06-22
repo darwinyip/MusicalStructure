@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 public class PlayingActivity extends Activity {
 
-    boolean playing = true;
-    ImageButton playPauseButton;
+    private boolean playing;
+    private ImageButton playPauseButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,11 @@ public class PlayingActivity extends Activity {
             }
         });
 
+        playing = true;
+
     }
 
-    void togglePlayButton() {
+    private void togglePlayButton() {
         if (playing) {
             playPauseButton.setImageResource(R.drawable.ic_pause_circle_outline_black_48dp);
         } else {

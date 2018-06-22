@@ -11,9 +11,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
 
-    private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView.Adapter adapter;
     private ArrayList<Song> songs;
 
     @Override
@@ -24,11 +21,11 @@ public class MainActivity extends Activity {
         songs = new ArrayList<>();
         populateList();
 
-        recyclerView = findViewById(R.id.recycler_view);
+        RecyclerView recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setHasFixedSize(true);
-        layoutManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        adapter = new SongAdapter(songs);
+        RecyclerView.Adapter adapter = new SongAdapter(songs);
         recyclerView.setAdapter(adapter);
         recyclerView.addOnItemTouchListener(new RecyclerItemListener(this.getApplicationContext(),
                 new RecyclerItemListener.RecyclerTouchListener() {
