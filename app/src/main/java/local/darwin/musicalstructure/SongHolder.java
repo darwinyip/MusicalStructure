@@ -5,7 +5,8 @@ import android.view.View;
 import android.widget.TextView;
 
 class SongHolder extends RecyclerView.ViewHolder {
-    private TextView title, artist;
+    private TextView title;
+    private TextView artist;
 
     SongHolder(View itemView) {
         super(itemView);
